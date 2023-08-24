@@ -1,3 +1,9 @@
+const apple = 3;
+const banana = 2;
+
+console.log(`철수는 사과를 ${apple}개 바나나를 ${banana}개 가지고 있습니다`)
+
+
 function getWelcomeTemplate({name, age, school, createdAt}){
     const result = `
         <html>
@@ -14,10 +20,19 @@ function getWelcomeTemplate({name, age, school, createdAt}){
     console.log(result);
 }
 
+// const myuser = {
+    // name: '영희',
+    // age: 11,
+    // school: '열혈초등학교',
+    // createdAt: '2023-02-01'
+// }
+
+// getWelcomeTemplate(myuser)
+
 const name = 'Jun'
 const age = 100
 const school = '열혈초등학교'
 const createdAt = '2023-01-01'
 
-
-getWelcomeTemplate({name ,age , school, createdAt})
+// const myuser = { name, age, school, createdAt }  
+getWelcomeTemplate({ name, age, school, createdAt })
