@@ -1,9 +1,15 @@
+// const express = require('express');
 import express from 'express';
 import { checkValidationPhone, getToken, sendTokenToSMS } from './phone.js'
+import swaggerUi from 'swagger-ui-express';
+import swaggerJsdoc from 'swagger-jsdoc';
+import { options } from './swagger/config.js'
+
+const swaggerSpec = swaggerJsdoc(options)
 
 const app = express();
-
 app.use(express.json())
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
 app.get('/boards', (req,res) => {
     // 1. 데이터를 조회하는 로직 -> DB에 접속해서 데이터 꺼내오
     const result = [
@@ -22,7 +28,7 @@ app.post('/boards', (req,res) => {
     // 1. 데이터를 등록하는 로직 -> DB에 접속해서 데이터 저장하기
 
     // 2. 저장 결과를 응답 주기
-    res.send("게시물 등록에 성공했어")
+    res.send("게시물 등록에 성공했어요")
 })
 
 app.post('/tokens/phone', (req, res)=> {
