@@ -1,4 +1,3 @@
-.DS_Store
 1. Class/04-01-rest-api-with-express/node_modules
 1. Class/04-02-rest-api-with-express-board/node_modules
 1. Class/04-03-rest-api-with-express-swagger/node_modules
@@ -6,3 +5,4 @@
 1. Class/05-02-graphql-api-with-apollo-server/node_modules
 1. Class/05-03-graphql-api-with-apollo-server-board/node_modules
 1. Class/05-04-graphql-api-with-apollo-server-phone/node_modules
+1. Class/06-01-async-await/node_modules
